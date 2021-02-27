@@ -1,3 +1,184 @@
+.container__header .header__left {
+  font-weight: 500;
+}
 
+.container__header .header__btn, h1 {
+  font-weight: 900;
+}
+
+.ps-1 {
+  font-size: 1em;
+}
+
+.ps-2 {
+  font-size: 2em;
+}
+
+.ps-3 {
+  font-size: 3em;
+}
+
+h1 {
+  font-size: 4.3em;
+  border-bottom: 10px solid #ff2a2a;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.background {
+  background-color: #ff2a2a;
+  color: #272727;
+  padding: 0 50px;
+}
+
+.navbar {
+  background-color: #fff5f5;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.23);
+  height: 10vh;
+  position: relative;
+  z-index: 1;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  list-style-type: none;
+  height: 100%;
+}
+.navbar ul a {
+  text-decoration: none;
+  color: #272727;
+  padding: 0 15px;
+  font-weight: bolder;
+}
+.navbar ul a:hover {
+  color: #ff2a2a;
+}
+.navbar__left {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  padding: 0 4em;
+}
+.navbar__right {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  padding: 0 4em;
+  justify-content: flex-end;
+}
+
+.container__header {
+  background: linear-gradient(130deg, #efefef 25%, white 80%);
+  width: 100%;
+  height: 100vh;
+  padding: 0 4em;
+  padding-top: 1.5em;
+}
+.container__header .header {
+  display: flex;
+  justify-content: space-between;
+}
+.container__header .header__left {
+  width: 40%;
+}
+.container__header .header__left p {
+  font-size: 1.5em;
+  margin-bottom: 2rem;
+}
+.container__header .header__btn {
+  background-color: #FFF12A;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  outline: none;
+  border: none;
+}
+.container__header .header__icons {
+  font-size: 2.5rem;
+  color: black;
+}
+.container__header .header__right {
+  width: 60%;
+}
+.container__header .header__right img {
+  width: 60%;
+  float: right;
+}
+
+.about {
+  background: white;
+  width: 100%;
+  height: 100vh;
+  padding: 0 4em;
+  padding-top: 1.5em;
+  position: relative;
+  padding-top: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.about__h1 {
+  position: absolute;
+  border: none;
+  top: 75%;
+  left: 0;
+  margin-left: 8%;
+  color: #747474;
+  transform: rotate(270deg);
+  transform-origin: 0;
+  font-size: 4em;
+}
+.about__img {
+  width: 55%;
+  border-right: 1em #ff2a2a solid;
+  border-bottom: 1em #ff2a2a solid;
+}
+.about__text {
+  width: 55%;
+  font-size: 1.5em;
+  text-align: justify;
+}
+
+.container__header .header__left {
+  font-weight: 500;
+}
+
+h1, .container__header .header__btn {
+  font-weight: 900;
+}
+
+.ps-1 {
+  font-size: 1em;
+}
+
+.ps-2 {
+  font-size: 2em;
+}
+
+.ps-3 {
+  font-size: 3em;
+}
+
+h1 {
+  font-size: 4.3em;
+  border-bottom: 10px solid #ff2a2a;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
 
 /*# sourceMappingURL=denis-trainer.css.map */

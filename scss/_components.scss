@@ -1,0 +1,18 @@
+h1{
+    font-size: $h1-size;
+    border-bottom: 10px solid $main-color;
+    display: inline-block;
+    margin-bottom: $padding-under;
+    
+   @extend %f-900;
+}
+
+@mixin btnz($btncolor){
+    background-color: $btncolor;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    @extend %f-900;
+    margin-bottom: $padding-under;    
+}
