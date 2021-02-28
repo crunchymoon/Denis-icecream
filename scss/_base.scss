@@ -23,12 +23,12 @@ $about-scale:55%;
 
 
 //MIXINS
-@mixin fullsize{
+@mixin fullsize {
     width: 100vw;
     height: 100vh;
 }
 
-@mixin flexy{
+@mixin flexy {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
@@ -37,37 +37,35 @@ $about-scale:55%;
     padding: $padding-inner;
 }
 
-@mixin container($contColor){
-    background: $contColor;
-    width: 100%;
-    height: 100vh;
-    padding: $padding-inner;
-    padding-top: $padding-above;
+@mixin rowFlex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
+@mixin colFlex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 //MAPS
-$fontweights:(
-    400,
+$fontweights:(400,
     500,
     700,
-    900
-);
+    900);
+
 @each $fontweight in $fontweights {
-    %f-#{$fontweight}{
+    %f-#{$fontweight} {
         font-weight: #{$fontweight};
     }
 }
 
-$psizes:(
-    1,
+$psizes:(1,
     2,
-    3
-);
+    3);
+
 @each $psize in $psizes {
-    .ps-#{$psize}{
+    .ps-#{$psize} {
         font-size: #{$psize}em;
     }
 }
-
-
-
-

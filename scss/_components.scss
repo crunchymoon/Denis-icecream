@@ -16,3 +16,22 @@ h1{
     @extend %f-900;
     margin-bottom: $padding-under;    
 }
+
+//if $contColor==white -> height: auto else height : 100vh;
+//@function autoHeight ($contColor){
+//    @if($contColor==white){
+//        @return height:10vh;        
+//    } @else {
+//        @return height: 100vh;
+//    }   
+//}
+
+@mixin container($contColor,$heightSize){
+    background: $contColor;
+    width: 100%;
+    height: $heightSize;
+    padding: $padding-inner;
+    padding-top: $padding-above;
+}
+
+
