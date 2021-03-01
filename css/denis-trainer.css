@@ -187,6 +187,7 @@ h1 {
   width: 60%;
   margin: auto;
   border: 5px hotpink solid;
+  overflow: hidden;
 }
 .carousel__slide {
   display: flex;
