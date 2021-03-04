@@ -167,6 +167,7 @@ h1 {
   padding: 0;
   align-items: center;
   text-align: center;
+  padding-bottom: 2rem;
 }
 .proffs__item {
   display: flex;
@@ -183,19 +184,56 @@ h1 {
   font-size: 1.5em;
 }
 
-.carousel__container {
-  width: 60%;
-  margin: auto;
-  border: 5px hotpink solid;
+.carousel {
+  position: relative;
+  background-color: #dadada;
+  padding: 1.5em 0;
   overflow: hidden;
+}
+.carousel__container {
+  width: 40%;
+  margin: 1.5em auto;
+  padding: 0 4%;
 }
 .carousel__slide {
   display: flex;
   width: 100%;
-  height: 500px;
+  height: auto;
+  transform: translateX(-100%);
 }
 .carousel img {
   width: 100%;
+  transform: scale(0.8);
+  transition-duration: 0.5s;
+}
+.carousel__btn {
+  position: absolute;
+  top: 34%;
+  left: 30%;
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+.carousel__btn button {
+  height: 90px;
+  width: 70px;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  outline: none;
+  font-size: 1.5em;
+}
+.carousel__dots {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 8%;
+  margin: 0 46%;
+}
+.carousel__dots--dot {
+  width: 1em;
+  height: 1em;
+  border-radius: 100px;
+  background-color: #ff2a2a;
 }
 
 .container__header .header__left {

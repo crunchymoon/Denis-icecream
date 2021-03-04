@@ -6,7 +6,9 @@ h1{
     
    @extend %f-900;
 }
+//BUTTONS
 
+//main button
 @mixin btnz($btncolor){
     background-color: $btncolor;
     width: 10rem;
@@ -17,6 +19,15 @@ h1{
     margin-bottom: $padding-under;    
 }
 
+//carousel buttons
+@mixin carBtn{
+    height: 90px;
+    width: 70px;
+    background: rgba(255,255,255, .5);
+    border: none;
+    outline: none;
+    font-size: $text-size;
+}
 
 @mixin container($contColor,$heightSize){
     background: $contColor;
