@@ -203,3 +203,58 @@
         }
     }
 }
+
+.hwork {
+    @include container(white, auto);
+    text-align: center;
+
+    h1 {
+        margin-bottom: $padding-under*2;
+    }
+
+    &__container-main {
+        @include rowFlex;
+
+
+        .left {
+            text-align: right;
+        }
+
+        .right {
+            text-align: left;
+        }
+
+        &-side {
+            width: 33%;
+
+            h3 {
+                font-size: $h3-size;
+                margin-bottom: $padding-under/2;
+            }
+
+            p {
+                font-size: $text-size/1.2;
+            }
+        }
+        .mid {
+            img {
+                width: 55%;
+            }
+        }
+    }
+
+    &__container-items {
+        @include rowFlex;
+        width: 100%;
+        margin-bottom: $padding-under;
+
+        i {
+            font-size: $bigicon;
+            color: $main-color;
+        }
+    }
+
+    &__container-text {
+        width: 80%;
+    }
+}
