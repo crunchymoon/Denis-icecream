@@ -2,19 +2,15 @@
   font-weight: 500;
 }
 
-.container__header .header__btn, h1 {
+.membership__btn {
+  font-weight: 800;
+}
+
+.membership__card-data span, .membership__card-data h3, .container__header .header__btn, h1 {
   font-weight: 900;
 }
 
-.ps-1 {
-  font-size: 1em;
-}
-
-.ps-2 {
-  font-size: 2em;
-}
-
-.ps-3 {
+.membership__card-data span {
   font-size: 3em;
 }
 
@@ -139,7 +135,7 @@ h1 {
   top: 75%;
   left: 0;
   margin-left: 8%;
-  color: #747474;
+  color: silver;
   transform: rotate(270deg);
   transform-origin: 0;
   font-size: 4em;
@@ -259,6 +255,10 @@ h1 {
   text-align: left;
 }
 .hwork__container-main-side {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
   width: 33%;
 }
 .hwork__container-main-side h3 {
@@ -269,7 +269,7 @@ h1 {
   font-size: 1.25em;
 }
 .hwork__container-main .mid img {
-  width: 55%;
+  width: 50%;
 }
 .hwork__container-items {
   display: flex;
@@ -286,23 +286,83 @@ h1 {
   width: 80%;
 }
 
+.membership {
+  background: white;
+  width: 100%;
+  height: auto;
+  padding: 0 5em;
+  padding-top: 1.5em;
+  text-align: center;
+}
+.membership__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3em;
+  grid-auto-rows: minmax(80vh, auto);
+}
+.membership__card {
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 13px 2px rgba(0, 0, 0, 0.33);
+  box-shadow: 0px 5px 13px 2px rgba(0, 0, 0, 0.33);
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+.membership__card-data {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+.membership__card-data h3 {
+  color: #272727;
+  font-size: 2.5em;
+}
+.membership__card-data span {
+  color: #ff2a2a;
+}
+.membership__card-data ul {
+  text-align: center;
+  padding: 0 10%;
+}
+.membership__card-data li {
+  list-style-type: none;
+  color: #8d8d8d;
+  font-size: 1.6em;
+  text-align: left;
+}
+.membership__card-texts {
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  justify-content: space-between;
+}
+.membership__btn {
+  background-color: #ff2a2a;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 2.6em;
+  cursor: pointer;
+  border-radius: 0 0 25px 25px;
+  font-size: 1.5em;
+  color: white;
+}
+
 .container__header .header__left {
   font-weight: 500;
 }
 
-h1, .container__header .header__btn {
+.membership__btn {
+  font-weight: 800;
+}
+
+h1, .container__header .header__btn, .membership__card-data h3, .membership__card-data span {
   font-weight: 900;
 }
 
-.ps-1 {
-  font-size: 1em;
-}
-
-.ps-2 {
-  font-size: 2em;
-}
-
-.ps-3 {
+.membership__card-data span {
   font-size: 3em;
 }
 

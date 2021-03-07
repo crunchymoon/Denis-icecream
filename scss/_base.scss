@@ -44,16 +44,26 @@ $about-scale:55%;
     justify-content: space-between;
     flex-direction: row;
 }
+
 @mixin colFlex {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
+@mixin gridCards($minHeight) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3em;
+    grid-auto-rows: minmax($minHeight, auto);
+}
+
 //MAPS
-$fontweights:(400,
+$fontweights:(
+    400,
     500,
     700,
+    800,
     900);
 
 @each $fontweight in $fontweights {
@@ -64,10 +74,11 @@ $fontweights:(400,
 
 $psizes:(1,
     2,
-    3);
+    3,
+    4);
 
 @each $psize in $psizes {
-    .ps-#{$psize} {
+    %ps-#{$psize} {
         font-size: #{$psize}em;
     }
 }
