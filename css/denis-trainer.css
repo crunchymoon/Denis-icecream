@@ -29,7 +29,7 @@ h1 {
 }
 
 .background {
-  background-color: #ff2a2a;
+  background-color: hotpink;
   color: #272727;
   padding: 0 50px;
 }
@@ -87,6 +87,7 @@ h1 {
   justify-content: space-between;
 }
 .container__header .header__left {
+  background-color: hotpink;
   width: 40%;
 }
 .container__header .header__left p {
