@@ -1,4 +1,4 @@
-.container__header .header__left {
+.contact__form, .container__header .header__left {
   font-weight: 500;
 }
 
@@ -6,16 +6,12 @@
   font-weight: 800;
 }
 
-.membership__card-data span, .membership__card-data h3, .container__header .header__btn, h1 {
+.contact__btn, .membership__card-data span, .membership__card-data h3, .container__header .header__btn, h1 {
   font-weight: 900;
 }
 
-.membership__card-data span {
-  font-size: 3em;
-}
-
 h1 {
-  font-size: 4.3em;
+  font-size: 3.5em;
   border-bottom: 10px solid #ff2a2a;
   display: inline-block;
   margin-bottom: 2rem;
@@ -29,7 +25,11 @@ h1 {
 }
 
 .background {
+<<<<<<< Updated upstream
   background-color: hotpink;
+=======
+  background-color: black;
+>>>>>>> Stashed changes
   color: #272727;
   padding: 0 50px;
 }
@@ -81,6 +81,8 @@ h1 {
   height: 100vh;
   padding: 0 5em;
   padding-top: 1.5em;
+  text-align: center;
+  text-align: left;
 }
 .container__header .header {
   display: flex;
@@ -88,6 +90,9 @@ h1 {
 }
 .container__header .header__left {
   width: 40%;
+}
+.container__header .header__left h1 {
+  font-size: 4.3em;
 }
 .container__header .header__left p {
   font-size: 1.5em;
@@ -121,10 +126,10 @@ h1 {
   height: auto;
   padding: 0 5em;
   padding-top: 1.5em;
+  text-align: center;
   height: auto;
   position: relative;
   padding-top: 0;
-  text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -157,12 +162,12 @@ h1 {
   height: auto;
   padding: 0 5em;
   padding-top: 1.5em;
+  text-align: center;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   padding: 0;
   align-items: center;
-  text-align: center;
   padding-bottom: 2rem;
 }
 .proffs__item {
@@ -293,6 +298,7 @@ h1 {
   padding: 0 5em;
   padding-top: 1.5em;
   text-align: center;
+  padding-bottom: 4rem;
 }
 .membership__container {
   display: grid;
@@ -302,11 +308,11 @@ h1 {
 }
 .membership__card {
   background-color: white;
-  -webkit-box-shadow: 0px 5px 13px 2px rgba(0, 0, 0, 0.33);
   box-shadow: 0px 5px 13px 2px rgba(0, 0, 0, 0.33);
-  width: 100%;
+  width: 95%;
   height: 100%;
   border-radius: 25px;
+  transition-duration: 0.5s;
 }
 .membership__card-data {
   display: flex;
@@ -316,9 +322,10 @@ h1 {
 }
 .membership__card-data h3 {
   color: #272727;
-  font-size: 2.5em;
+  font-size: 2.2em;
 }
 .membership__card-data span {
+  font-size: 2.5em;
   color: #ff2a2a;
 }
 .membership__card-data ul {
@@ -338,6 +345,9 @@ h1 {
   height: 60%;
   justify-content: space-between;
 }
+.membership__card:hover {
+  transform: scale(1.05);
+}
 .membership__btn {
   background-color: #ff2a2a;
   outline: none;
@@ -347,10 +357,79 @@ h1 {
   cursor: pointer;
   border-radius: 0 0 25px 25px;
   font-size: 1.5em;
-  color: white;
+  color: #FFF;
 }
 
-.container__header .header__left {
+.contact {
+  background-color: white;
+  text-align: center;
+}
+.contact__container {
+  background: #272727;
+  width: 100%;
+  height: auto;
+  padding: 0 5em;
+  padding-top: 1.5em;
+  text-align: center;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.contact__form {
+  color: black;
+  padding: 0 2em;
+  font-size: 1.5em;
+  width: 55%;
+  background-color: white;
+  border-radius: 0.3em;
+}
+.contact__form form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1.5em;
+}
+.contact__form form input,
+.contact__form form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  margin-top: 1.5em;
+  margin-bottom: 2rem;
+  resize: none;
+}
+.contact__infos {
+  color: white;
+  width: 35%;
+}
+.contact__infos-above {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.contact__btn {
+  background-color: #ff2a2a;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  outline: none;
+  border: none;
+  align-self: flex-end;
+  color: #FFF;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+}
+
+.container__header .header__left, .contact__form {
   font-weight: 500;
 }
 
@@ -358,16 +437,12 @@ h1 {
   font-weight: 800;
 }
 
-h1, .container__header .header__btn, .membership__card-data h3, .membership__card-data span {
+h1, .container__header .header__btn, .membership__card-data h3, .membership__card-data span, .contact__btn {
   font-weight: 900;
 }
 
-.membership__card-data span {
-  font-size: 3em;
-}
-
 h1 {
-  font-size: 4.3em;
+  font-size: 3.5em;
   border-bottom: 10px solid #ff2a2a;
   display: inline-block;
   margin-bottom: 2rem;

@@ -135,7 +135,7 @@
         </section>
 
         <section class="membership">
-            <h1>How it works</h1>
+            <h1>Membership</h1>
             <div class="membership__container">
                 <div class="membership__card">
                     <div class="membership__card-data">
@@ -189,6 +189,38 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="contact">
+            <h1>Contact me</h1>
+            <div class="contact__container">
+                <div class="contact__form">
+                    <form action="#" id="contactForm">
+                        Name<input type="text" name=contactName>
+                        Email<input type="email">
+                        Message<textarea rows="4" cols="50" name="comment" form="contactForm">
+                        </textarea>
+                        <button class="contact__btn">Send</button>
+                    </form>
+                </div>
+                <div class="contact__infos">
+                    <div class="contact__infos-above">
+                        <div class="contact__info">
+                            <h3>My address: </h3>
+                            <p>1234 Szeged</p>
+                            <p>Xyz Street 12</p>
+                        </div>
+                        <div class="contact__info">
+                            <h3>Contact: </h3>
+                            <p>hello@hello.com</p>
+                            <p>+36 1234 5678</p>
+                        </div>
+                    </div>
+                    <div class="contact__infos-below">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC5BSznp-JCjr1M69Y3Xtaz4rUCgBE_Vg&callback=initMap&libraries=&v=weekly" async></script>
         </section>
     </div>
 </body>

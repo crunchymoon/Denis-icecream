@@ -72,3 +72,97 @@ window.addEventListener('load', function () {
         })
     });
 });
+
+
+//Google maps
+function initMap() {
+                    //Map options
+                    let options = {
+                        zoom: 9,
+                        center: {
+                            lat: 46.2530,
+                            lng: 20.1414
+                        }
+                    }
+
+                    //New map
+                    let map = new google.maps.Map(document.getElementById('map'), options);
+
+                    //Add a custom icon
+                    let image = "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
+
+                    //Add any markers function 
+                    function addMarker(props) {
+                        let marker = new google.maps.Marker({
+                            position: props.coords,
+                            map: map,
+                            icon: props.iconImg
+                        });
+                        if (props.content) {
+                            let infoWindow = new google.maps.InfoWindow({
+                                content: props.content
+                            });
+                            marker.addListener('click', (e) => {
+                                infoWindow.open(map, marker);
+                            })
+                        }
+                    }
+
+                    let markers = [{
+                            coords: {
+                                lat: 46.2530,
+                                lng: 20.1414
+                            },
+                            iconImg: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+                            content: '<h1>szegde</h1>'
+                        },
+                        {
+                            coords: {
+                                lat: 46.0616,
+                                lng: 20.0470
+                            },
+                            content: '<h1>kanizsaa</h1>'
+                        }
+                    ];
+                    
+                    markers.forEach(marker=>{
+                        addMarker(marker);
+                    })
+//                    addMarker({
+//                        coords: {
+//                            lat: 46.2530,
+//                            lng: 20.1414
+//                        },
+//                        iconImg: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+//                        content: '<h1>szegde</h1>'
+//                    })
+//
+//                    addMarker({
+//                        coords: {
+//                            lat: 46.0616,
+//                            lng: 20.0470
+//                        },
+//                        content: '<h1>kanizsaa</h1>'
+//                    })
+
+
+                    //Add a single marker
+                    /*
+                    let marker = new google.maps.Marker({
+                        position: {
+                            lat: 46.2530,
+                            lng: 20.1414
+                        },
+                        map: map,
+                        icon: image
+                    });
+                    
+                    //Add info window
+                    let infoWindow = new google.maps.InfoWindow({
+                        content: '<h1> Szegeeed </h1>'
+                    });
+                    marker.addListener('click',(e)=>{
+                        infoWindow.open(map, marker);
+                    })*/
+
+                }

@@ -11,7 +11,12 @@
 }
 
 .background {
+<<<<<<< Updated upstream
     background-color: hotpink;
+=======
+//    background-color: $main-color;
+    background-color: black;
+>>>>>>> Stashed changes
     color: $text-color;
     padding: 0 50px;
 }
@@ -52,6 +57,7 @@
 
 .container__header {
     @include container($main-gradient, 100vh);
+    text-align: left;
 
     .header {
         display: flex;
@@ -60,6 +66,10 @@
         &__left {
             width: 40%;
             @extend %f-500;
+            
+            h1 {
+               font-size: $joanna; 
+            }
 
             p {
                 font-size: $text-size;
@@ -94,7 +104,6 @@
     height: auto;
     position: relative;
     padding-top: 0;
-    text-align: center;
     @include colFlex;
 
 
@@ -129,7 +138,6 @@
     @include rowFlex;
     padding: 0;
     align-items: center;
-    text-align: center;
     padding-bottom: $padding-under;
 
     &__item {
@@ -205,7 +213,6 @@
 
 .hwork {
     @include container(white, auto);
-    text-align: center;
 
     h1 {
         margin-bottom: $padding-under*2;
@@ -263,7 +270,7 @@
 
 .membership {
     @include container(white, auto);
-    text-align: center;
+    padding-bottom: $padding-under*2;
 
     &__container {
         @include gridCards(80vh);
@@ -271,36 +278,34 @@
 
     &__card {
         background-color: white;
-        -webkit-box-shadow: 0px 5px 13px 2px rgba(0,0,0,0.33); 
-        box-shadow: 0px 5px 13px 2px rgba(0,0,0,0.33);
-        width: 100%;
+        box-shadow: 0px 5px 13px 2px rgba(0, 0, 0, 0.33);
+        width: 95%;
         height: 100%;
         border-radius: 25px;
+        transition-duration: .5s;
 
         &-data {
             display: flex;
             flex-direction: column;
-//            padding:0 1.5em;
             height: 100%;
             justify-content: space-between;
+
             h3 {
                 color: $text-color;
-                font-size: 2.5em;
+                font-size: 2.2em;
                 @extend %f-900;
 
             }
 
             span {
                 @extend %f-900;
-                @extend %ps-3;
+                font-size: 2.5em;
                 color: $main-color;
-//                margin-top: $padding-above;
             }
-            ul{
+
+            ul {
                 text-align: center;
                 padding: 0 10%;
-//                margin-top: $padding-above;
-
             }
 
             li {
@@ -310,15 +315,21 @@
                 text-align: left;
             }
         }
-        &-texts{
+
+        &-texts {
             margin-top: $padding-above;
             display: flex;
             flex-direction: column;
             height: 60%;
             justify-content: space-between;
         }
+        
+        &:hover {
+            transform: scale(1.05);
+        }
     }
-    &__btn{
+
+    &__btn {
         background-color: $main-color;
         outline: none;
         border: none;
@@ -328,6 +339,69 @@
         border-radius: 0 0 25px 25px;
         font-size: 1.5em;
         @extend %f-800;
-        color: white;
+        color: setWhiteOnRed($main-color);
     }
 }
+
+.contact {
+    background-color: white;
+    text-align: center;
+
+    &__container {
+        @include container($text-color, auto);
+        padding: 1em 2em;
+        @include rowFlex;
+    }
+
+    &__form {
+        color: black;
+        padding: $padding-inner-small;
+        font-size: $text-size;
+        @extend %f-500;
+        width: 55%;
+        background-color: white;
+        border-radius: .3em;
+
+
+        form {
+            @include colFlex;
+            align-items: flex-start;
+            margin-top: $padding-above;
+
+            input,
+            textarea {
+                width: 100%;
+                border: none;
+                border-bottom: 2px solid black;
+                outline: none;
+                margin-top: $padding-above;
+                margin-bottom: $padding-under;
+                resize: none;
+            }
+        }
+    }
+
+    &__infos {
+        color: white;
+        width: 35%;
+
+        &-above {
+            @include rowFlex;
+            justify-content: space-around;
+        }
+    }
+
+    &__btn {
+        @include btnz($main-color);
+        outline: none;
+        border: none;
+        align-self: flex-end;
+        color: setWhiteOnRed($main-color);
+    }
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+}
+
